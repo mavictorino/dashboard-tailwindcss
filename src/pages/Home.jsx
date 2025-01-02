@@ -2,6 +2,7 @@ import React from 'react'
 import ProjectStatistics from '../components/ProjectStatistics'
 import Platforms from '../components/Platforms'
 import ProjectCard from '../components/ProjectCard';
+import ClientCard from '../components/ClientCard'
 
 const projects = [
   {
@@ -38,6 +39,29 @@ const projects = [
   },
 ];
 
+const clients = [
+  {
+    name: "XPTO Enterprise", 
+    title: "CEO", 
+    date: "2024-02-09",
+  },
+  {
+    name: "567 Company", 
+    title: "Sales Director", 
+    date: "2024-03-14",
+  },
+  {
+    name: "321 Industries", 
+    title: "Product Director", 
+    date: "2024-05-31",
+  },
+  {
+    name: "Jam Technicals", 
+    title: "Marketing Manager", 
+    date: "2024-06-15",
+  },
+]
+
 const Home = () => {
   return (
     <div className='p-5 '>
@@ -58,6 +82,19 @@ const Home = () => {
         <div className='grid md:grid-cols-2 xl:grid-cols-4 gap-8'>
           {
             projects && projects.map((project) => <ProjectCard project={project} />)
+          }
+        </div>
+      </div>
+
+      <div>
+        <div className='flex justify-between items-center py-4'>
+          <h1 className='text-lg font-semibold'>Current Clients</h1>
+          <p className='text-sm underline text-indigo-600'>See all</p>
+        </div>
+
+        <div className='grid md:grid-cols-2 xl:grid-cols-4 gap-8'>
+          {
+            clients && clients.map((client) => <ClientCard client={client} />)
           }
         </div>
       </div>
