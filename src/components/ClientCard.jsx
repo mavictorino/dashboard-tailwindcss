@@ -8,6 +8,7 @@ const ClientCard = ({ client }) => {
         <p className='text-sm text-gray-400'>{client.title}</p>
       </div>
       <p className='text-sm text-gray-300'>{client.date}</p>
+      
     </div>
   )
 }
